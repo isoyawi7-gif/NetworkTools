@@ -58,6 +58,27 @@
             margin: 0 auto;
         }
 
+        /* Dashboard Button Styling */
+        .btn-dashboard {
+            display: inline-flex;
+            align-items: center;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            padding: 10px 16px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            border-radius: 4px;
+            margin-bottom: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: background-color 0.2s ease;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-dashboard:active {
+            background-color: #1a252f;
+        }
+
         .card {
             background: white;
             border-radius: 6px;
@@ -195,6 +216,8 @@
 
     <div class="container">
 
+        <a href="dashboard.html" class="btn-dashboard">← Back to Dashboard</a>
+
         <div class="card">
             <h2>Arrangement of Sections</h2>
             <ul class="toc-list">
@@ -214,37 +237,37 @@
         <div class="card">
             <h2>Part I. - Preliminary</h2>
             <h3>1. Interpretation</h3>
-            <p>Deemed to have come into operation on 29 October 2010. Made under the National Information and Communications Technology Act, 2009[cite: 60].</p>
+            <p>Deemed to have come into operation on 29 October 2010. Made under the National Information and Communications Technology Act, 2009.</p>
             
             <div class="definition-block">
-                <span class="term">"Act"</span> means the National Information and Communication Technology Act, 2009 and any regulations made under the Act[cite: 64];
+                <span class="term">"Act"</span> means the National Information and Communication Technology Act, 2009 and any regulations made under the Act;
             </div>
             <div class="definition-block">
-                <span class="term">"bandwidth service"</span> means a network service which enables the transmission of units of information over a link within a particular unit of time[cite: 67];
+                <span class="term">"bandwidth service"</span> means a network service which enables the transmission of units of information over a link within a particular unit of time;
             </div>
             <div class="definition-block">
-                <span class="term">"broadcasting distribution service"</span> means a network service that distributes television or radio programmes to appropriate receiving equipment regardless of distribution means, excluding point-to-point data/text or on-demand dial-up[cite: 68, 69, 71];
+                <span class="term">"broadcasting distribution service"</span> means a network service that distributes television or radio programmes to appropriate receiving equipment regardless of distribution means, excluding point-to-point data/text or on-demand dial-up;
             </div>
             <div class="definition-block">
-                <span class="term">"international gateway"</span> means any equipment, hardware or software, in a network which interfaces that network with an international network[cite: 79];
+                <span class="term">"international gateway"</span> means any equipment, hardware or software, in a network which interfaces that network with an international network;
             </div>
             <div class="definition-block">
-                <span class="term">"international gateway services"</span> means a network service which provides interconnection between a domestic network and an international gateway[cite: 80];
+                <span class="term">"international gateway services"</span> means a network service which provides interconnection between a domestic network and an international gateway;
             </div>
             <div class="definition-block">
-                <span class="term">"line link"</span> means a facility that enables communication between two distinct points on a network or networks, other than a radiocommunications link[cite: 87];
+                <span class="term">"line link"</span> means a facility that enables communication between two distinct points on a network or networks, other than a radiocommunications link;
             </div>
             <div class="definition-block">
-                <span class="term">"PSTN"</span> means a public switched telephone network[cite: 93];
+                <span class="term">"PSTN"</span> means a public switched telephone network;
             </div>
             <div class="definition-block">
-                <span class="term">"radiocommunications link"</span> means a radiocommunications facility that enables communication between two distinct points on a network or networks[cite: 117];
+                <span class="term">"radiocommunications link"</span> means a radiocommunications facility that enables communication between two distinct points on a network or networks;
             </div>
             <div class="definition-block">
-                <span class="term">"switching centre"</span> means a facility that terminates many circuits and which can interconnect or route traffic between and among circuits[cite: 123];
+                <span class="term">"switching centre"</span> means a facility that terminates many circuits and which can interconnect or route traffic between and among circuits;
             </div>
             <div class="definition-block">
-                <span class="term">"switching service"</span> means a network service that terminates many circuits or routes traffic using frame relay, router internetworking, MPLS, IP switching, nodes, or points of presence[cite: 124, 125, 126, 127].
+                <span class="term">"switching service"</span> means a network service that terminates many circuits or routes traffic using frame relay, router internetworking, MPLS, IP switching, nodes, or points of presence.
             </div>
         </div>
 
@@ -255,80 +278,80 @@
             <h3>1. Statutory Framework</h3>
             <p>Under Section 1 of the Regulations, specific definitions govern non-public infrastructure architectures:</p>
             <ul>
-                <li><span class="term">"private use"</span> is strictly defined as the use of network services by a closed user group[cite: 91].</li>
-                <li><span class="term">"closed user group"</span> carries the structural meaning established under Section 2(2) of the core regulations[cite: 72].</li>
+                <li><span class="term">"private use"</span> is strictly defined as the use of network services by a closed user group.</li>
+                <li><span class="term">"closed user group"</span> carries the structural meaning established under Section 2(2) of the core regulations.</li>
             </ul>
 
             <h3>2. NICTA Regulatory Authority</h3>
-            <p>According to Section 2(2), NICTA reserves the power to issue formal operational guidelines to clarify the technical and commercial meaning of a "closed user group"[cite: 141]. This directly determines whether an operator's internal infrastructure fits the criteria for a <strong>class network licence for private use</strong> rather than an individual licence[cite: 142].</p>
+            <p>According to Section 2(2), NICTA reserves the power to issue formal operational guidelines to clarify the technical and commercial meaning of a "closed user group". This directly determines whether an operator's internal infrastructure fits the criteria for a <strong>class network licence for private use</strong> rather than an individual licence.</p>
 
             <h3>3. Infrastructure Categories (Schedule 1, Table A)</h3>
-            <p>Private deployments use distinct categories for licensing compliance[cite: 142]:</p>
+            <p>Private deployments use distinct categories for licensing compliance:</p>
             <ul>
-                <li><strong>Private Exchange Nodes & Network Infrastructure:</strong> Facilities deployed exclusively for Private Use operate under a <strong>Class Licence</strong> regime with an indefinite duration (N/A expiry), contrasting with commercial carrier infrastructure which requires an Individual Licence valid for up to 15 years[cite: 142, 145].</li>
-                <li><strong>Private Network Services:</strong> Network management layers mapped onto a closed user group are categorized under Class Licensing[cite: 142, 145].</li>
+                <li><strong>Private Exchange Nodes & Network Infrastructure:</strong> Facilities deployed exclusively for Private Use operate under a <strong>Class Licence</strong> regime with an indefinite duration (N/A expiry), contrasting with commercial carrier infrastructure which requires an Individual Licence valid for up to 15 years.</li>
+                <li><strong>Private Network Services:</strong> Network management layers mapped onto a closed user group are categorized under Class Licensing.</li>
             </ul>
         </div>
 
         <div class="card">
             <h2>Part II & III. - Operator Licensing Standards</h2>
             <h3>2. Licensing Requirements</h3>
-            <p>Schedule 1 mandates the necessary types, service durations, and rights allocations required to exercise facilities rights or supply ICT options within Papua New Guinea[cite: 133, 135, 138, 140].</p>
+            <p>Schedule 1 mandates the necessary types, service durations, and rights allocations required to exercise facilities rights or supply ICT options within Papua New Guinea.</p>
 
             <h3>3. Network Licence Exemptions</h3>
             <ol>
-                <li>NICTA may exempt a person from holding a network licence via a published declaration under Section 49(3) of the Act[cite: 148, 149].</li>
-                <li><strong>Condition Precedent:</strong> A fully licensed network operator must agree in writing to assume all statutory obligations under the Act for that exempted person[cite: 152, 155].</li>
-                <li>The agreement must bind the person to comply with the Act as if they were a full licensee[cite: 156, 157].</li>
-                <li>NICTA retains absolute discretion to impose conditions, vary terms, or suspend/revoke exemptions at any time[cite: 163, 166, 168, 170].</li>
+                <li>NICTA may exempt a person from holding a network licence via a published declaration under Section 49(3) of the Act.</li>
+                <li><strong>Condition Precedent:</strong> A fully licensed network operator must agree in writing to assume all statutory obligations under the Act for that exempted person.</li>
+                <li>The agreement must bind the person to comply with the Act as if they were a full licensee.</li>
+                <li>NICTA retains absolute discretion to impose conditions, vary terms, or suspend/revoke exemptions at any time.</li>
             </ol>
 
             <h3>6. Standard Terms for Individual Licences</h3>
-            <p>Until full rules are codified under Section 55 of the Act, all individual licensees must maintain compliance with these operational standards[cite: 183, 184]:</p>
+            <p>Until full rules are codified under Section 55 of the Act, all individual licensees must maintain compliance with these operational standards:</p>
             <ul>
-                <li>Promptly clear all applicable licence fees and levies[cite: 185].</li>
-                <li>Strictly maintain physical safety measures to safeguard life and property regarding electrical emissions and RF radiation hazards emanating from equipment installations[cite: 217].</li>
-                <li>Ensure charging and billing mechanisms are verifiable, accurate, and completely reliable in all material aspects[cite: 219, 221].</li>
-                <li>Notify NICTA within 14 days of any corporate restructuring, joint ventures, or changes in beneficial ownership/shareholding exceeding 10% in one year or 25% cumulatively[cite: 199, 203, 204, 206, 208].</li>
-                <li>Notify NICTA <em>prior</em> to share transfers or board composition updates changing hands by more than one quarter (25%)[cite: 210, 213, 215].</li>
-                <li>Indemnify NICTA against any third-party claims or proceedings resulting from licensee breaches[cite: 223].</li>
+                <li>Promptly clear all applicable licence fees and levies.</li>
+                <li>Strictly maintain physical safety measures to safeguard life and property regarding electrical emissions and RF radiation hazards emanating from equipment installations.</li>
+                <li>Ensure charging and billing mechanisms are verifiable, accurate, and completely reliable in all material aspects.</li>
+                <li>Notify NICTA within 14 days of any corporate restructuring, joint ventures, or changes in beneficial ownership/shareholding exceeding 10% in one year or 25% cumulatively.</li>
+                <li>Notify NICTA <em>prior</em> to share transfers or board composition updates changing hands by more than one quarter (25%).</li>
+                <li>Indemnify NICTA against any third-party claims or proceedings resulting from licensee breaches.</li>
             </ul>
         </div>
 
         <div class="card">
             <h2>Part IV & V. - Applications & Processing</h2>
             <h3>10. Individual Licence Applications</h3>
-            <p>Applications must be supported by comprehensive technical, financial, and organizational documentation[cite: 264, 266]:</p>
+            <p>Applications must be supported by comprehensive technical, financial, and organizational documentation:</p>
             <ul>
-                <li>Anticipated CapEx, OpEx, projected revenues, and financing plan sources[cite: 274].</li>
-                <li>Detailed technical design parameters, service roll-out schedules, geographic coverage maps, and target technology types[cite: 314, 315].</li>
-                <li>Operational safety parameters, including a verified <strong>Disaster Recovery Plan (DRP)</strong>[cite: 275, 276].</li>
-                <li>Corporate compliance data: Incorporation certificates, company constitutions, current extracts, and audited financial statements[cite: 279, 280, 281, 283, 285].</li>
-                <li>For foreign entities: Investment Promotion Authority (IPA) business certification[cite: 310].</li>
-                <li>Comprehensive CVs, verified police clearance checks, and valid passport/visa copies for all corporate directors and key shareholders[cite: 312].</li>
+                <li>Anticipated CapEx, OpEx, projected revenues, and financing plan sources.</li>
+                <li>Detailed technical design parameters, service roll-out schedules, geographic coverage maps, and target technology types.</li>
+                <li>Operational safety parameters, including a verified <strong>Disaster Recovery Plan (DRP)</strong>.</li>
+                <li>Corporate compliance data: Incorporation certificates, company constitutions, current extracts, and audited financial statements.</li>
+                <li>For foreign entities: Investment Promotion Authority (IPA) business certification.</li>
+                <li>Comprehensive CVs, verified police clearance checks, and valid passport/visa copies for all corporate directors and key shareholders.</li>
             </ul>
 
             <h3>11. Evaluation & Evaluation Timelines</h3>
-            <p>NICTA evaluates structural financial standing, technical expertise, corporate governance frameworks, business behavior history, spectrum availability, and prospective impacts on national security[cite: 334, 335, 336, 340, 342, 344, 346]. NICTA aims to process applications within a <strong>90-day window</strong> from receipt of all information[cite: 355, 356].</p>
+            <p>NICTA evaluates structural financial standing, technical expertise, corporate governance frameworks, business behavior history, spectrum availability, and prospective impacts on national security. NICTA aims to process applications within a <strong>90-day window</strong> from receipt of all information.</p>
         </div>
 
         <div class="card">
             <h2>Part VI, VII & VIII. - Financials & Governance</h2>
             <h3>14. Fee Defaulters & Late Penalty Interest</h3>
-            <p>Annual contributions are set by the Minister responsible for treasury matters to support NICTA's budget projections[cite: 14].</p>
-            <p><strong>Late Payment Penalties:</strong> Failure to pay fees or levies by the due date enables NICTA to impose additional late charges calculated daily at a rate of <strong>5 percentage points above the Kina Facility Rate per annum</strong>, and/or enforce immediate licence suspension[cite: 14].</p>
+            <p>Annual contributions are set by the Minister responsible for treasury matters to support NICTA's budget projections.</p>
+            <p><strong>Late Payment Penalties:</strong> Failure to pay fees or levies by the due date enables NICTA to impose additional late charges calculated daily at a rate of <strong>5 percentage points above the Kina Facility Rate per annum</strong>, and/or enforce immediate licence suspension.</p>
 
             <h3>21. Interconnection Billing Data Provision</h3>
-            <p>Access providers are legally required, upon formal request by an access seeker, to deliver structured billing information including customer names, billing addresses, account details, called numbers, connection times, durations, and geographic origin/termination nodes[cite: 21]. This data must be supplied in an electronically or physically agreed format[cite: 21].</p>
+            <p>Access providers are legally required, upon formal request by an access seeker, to deliver structured billing information including customer names, billing addresses, account details, called numbers, connection times, durations, and geographic origin/termination nodes. This data must be supplied in an electronically or physically agreed format.</p>
 
             <h3>22. Universal Access and Service Levy</h3>
-            <p>Pursuant to Section 107(2)(b) of the Act, NICTA caps the Universal Access and Service Levy at a maximum level <strong>not exceeding 2 percent of net revenues</strong>[cite: 22].</p>
+            <p>Pursuant to Section 107(2)(b) of the Act, NICTA caps the Universal Access and Service Levy at a maximum level <strong>not exceeding 2 percent of net revenues</strong>.</p>
         </div>
 
         <div class="card">
             <h2>Schedule 1. - Licence Categories Matrix</h2>
             
-            <h3>Table A: Network Licences [cite: 145]</h3>
+            <h3>Table A: Network Licences</h3>
             <div class="table-responsive">
                 <table>
                     <thead>
@@ -368,7 +391,7 @@
                 </table>
             </div>
 
-            <h3>Table B: Applications Licences [cite: 145]</h3>
+            <h3>Table B: Applications Licences</h3>
             <div class="table-responsive">
                 <table>
                     <thead>
@@ -404,7 +427,7 @@
         </div>
 
         <div class="card">
-            <h2>Schedule 2. - Prescribed Fee Schedule [cite: 146]</h2>
+            <h2>Schedule 2. - Prescribed Fee Schedule</h2>
             <div class="table-responsive">
                 <table>
                     <thead>
@@ -444,7 +467,7 @@
         </div>
 
         <div class="meta-info">
-            <p>Executed by the Head of State & Governor General on 29 October 2010[cite: 59, 146].</p>
+            <p>Executed by the Head of State & Governor General on 29 October 2010.</p>
             <p>Iso Yawi CTO Practice Engineering Resource • End of Document</p>
         </div>
 
