@@ -1,1 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iso Yawi Legal & Technical Dashboard</title>
+    <script>
+        // Simple client-side auth guardrail 
+        // Checks if user arrived via login; if not, redirects to index.html
+        window.onload = function() {
+            if (sessionStorage.getItem("authenticated") !== "true") {
+                alert("Access Denied. Please log in first.");
+                window.location.href = "index.html";
+            }
+        }
 
+        function handleLogout() {
+            sessionStorage.removeItem("authenticated");
+            window.location.href = "index.html";
+        }
+    </script>
+    <style>
+        :root {
+            --primary-color: #2c3e50; /* Deep Charcoal/Slate */
+            --secondary-color: #1a252f; /* Darker Slate */
+            --accent-color: #d4af37; /* Warm Corporate Amber/Gold */
+            --bg-light: #f4f5f7;
+            --text-main: #222222;
+            --text-muted: #7f8c8d;
+            --border-color: #e2e8f0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-light);
+            color: var(--text-main);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Top Header */
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 4px solid var(--accent-color);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 1.2rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        /* Logout Button */
+        .btn-logout {
+            background-color: transparent;
+            color: #fff;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            padding: 6px 12px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .btn-logout:hover {
+            background-color: #fff;
+            color: var(--primary-color);
+            border-color: #fff;
+        }
+
+        /* Main Container */
+        .main-container {
+            padding: 20px 15px;
+            max-width: 800px;
+            margin: 0 auto;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .welcome-card {
+            background: white;
+            border-radius: 6px;
+            padding: 20px;
+            margin-bottom: 20px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+        }
+
+        .welcome-card h2 {
+            margin-top: 0;
+            color: var(--primary-color);
+            font-size: 1.3rem;
+        }
+
+        .welcome-card p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 0;
+        }
+
+        /* Navigation Grid */
+        .nav-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+        }
+
+        @media (min-width: 480px) {
+            .nav-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        /* Nav Item / Card Link */
+        .nav-card {
+            background: white;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 20px;
+            text-decoration: none;
+            color: var(--text-main);
+            transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        .nav-card:active, .nav-card:hover {
+            border-color: var(--accent-color);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+            transform: translateY(-2px);
+        }
+
+        .nav-card.active-module {
+            border-left: 5px solid var(--accent-color);
+        }
+
+        .nav-card.placeholder-module {
+            border-left: 5px solid #bdc3c7;
+            background-color: #fafafa;
+            opacity: 0.75;
+            cursor: not-allowed;
+        }
+
+        .nav-card h3 {
+            margin: 0 0 8px 0;
+            font-size: 1.05rem;
+            color: var(--primary-color);
+        }
+
+        .nav-card p {
+            margin: 0;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            line-height: 1.4;
+        }
+
+        .status-badge {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+            padding: 2px 6px;
+            border-radius: 3px;
+            align-self: flex-start;
+            margin-top: 15px;
+        }
+
+        .status-ready {
+            background-color: #e6f4ea;
+            color: #137333;
+        }
+
+        .status-pending {
+            background-color: #f1f3f4;
+            color: #5f6368;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Iso Yawi Legal & Technical</h1>
+        <button class="btn-logout" onclick="handleLogout()">Logout</button>
+    </header>
+
+    <div class="main-container">
+        
+        <div class="welcome-card">
+            <h2>Executive Practice Portal</h2>
+            <p>Select an operational module below to review compliance metrics, legislative framework parameters, and core technical summaries.</p>
+        </div>
+
+        <div class="nav-grid">
+            
+            <a href="nicta_cto_study.html" class="nav-card active-module">
+                <div>
+                    <h3>NICTA Operator Licensing</h3>
+                    <p>Review Statutory Instrument parameters, fee schedules, individual frameworks, and private network regulations.</p>
+                </div>
+                <span class="status-badge status-ready">Available</span>
+            </a>
+
+            <a href="#" class="nav-card placeholder-module" onclick="event.preventDefault();">
+                <div>
+                    <h3>Spectrum Allocation Management</h3>
+                    <p>Frequency bands, engineering optimization indices, and national intervention criteria (Module coming soon).</p>
+                </div>
+                <span class="status-badge status-pending">Pending</span>
+            </a>
+
+            <a href="#" class="nav-card placeholder-module" onclick="event.preventDefault();">
+                <div>
+                    <h3>Infrastructure Compliance</h3>
+                    <p>Technical site logs, regional field operations metrics, and safety standards tracking (Module coming soon).</p>
+                </div>
+                <span class="status-badge status-pending">Pending</span>
+            </a>
+
+            <a href="#" class="nav-card placeholder-module" onclick="event.preventDefault();">
+                <div>
+                    <h3>National ICT Policy Review</h3>
+                    <p>Governance strategy alignment parameters and structural framework metrics (Module coming soon).</p>
+                </div>
+                <span class="status-badge status-pending">Pending</span>
+            </a>
+
+        </div>
+    </div>
+
+</body>
+</html>
