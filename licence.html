@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iso Yawi CTO Practice - NICTA Operator Licensing</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50; /* Deep Charcoal/Slate */
+            --secondary-color: #fcfcfc;
+            --text-color: #222222;
+            --accent-color: #d4af37; /* Warm Corporate Amber/Gold */
+            --bg-light: #f4f5f7;
+            --border-color: #e2e8f0;
+            --table-header: #1a252f;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-light);
+            margin: 0;
+            padding: 0;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 22px 16px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+            border-bottom: 4px solid var(--accent-color);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 1.4rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        header p {
+            margin: 6px 0 0 0;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #bdc3c7;
+        }
+
+        .container {
+            padding: 14px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background: white;
+            border-radius: 6px;
+            padding: 16px;
+            margin-bottom: 18px;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+            border: 1px solid var(--border-color);
+        }
+
+        .private-section {
+            border-left: 5px solid var(--accent-color) !important;
+            background-color: #fffdf5;
+        }
+
+        .private-badge {
+            background-color: var(--accent-color);
+            color: #1a252f;
+            font-weight: bold;
+            padding: 2px 6px;
+            font-size: 0.75rem;
+            border-radius: 3px;
+            text-transform: uppercase;
+            display: inline-block;
+            margin-bottom: 8px;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 6px;
+            font-size: 1.15rem;
+            margin-top: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        h3 {
+            font-size: 1rem;
+            color: var(--primary-color);
+            margin-top: 16px;
+            margin-bottom: 8px;
+            background-color: #edf2f7;
+            padding: 6px 10px;
+            border-left: 4px solid var(--primary-color);
+            border-radius: 0 4px 4px 0;
+        }
+
+        .definition-block {
+            margin-bottom: 12px;
+            padding-bottom: 12px;
+            border-bottom: 1px dashed var(--border-color);
+        }
+
+        .definition-block:last-child {
+            border-bottom: none;
+        }
+
+        .term {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        ul, ol {
+            margin: 6px 0;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 6px;
+            font-size: 0.95rem;
+        }
+
+        .table-responsive {
+            width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            margin: 15px 0;
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+            font-size: 0.85rem;
+            min-width: 550px;
+        }
+
+        th {
+            background-color: var(--table-header);
+            color: white;
+            padding: 10px 12px;
+            font-weight: 600;
+        }
+
+        td {
+            padding: 10px 12px;
+            border-bottom: 1px solid var(--border-color);
+            background-color: #fff;
+            vertical-align: top;
+        }
+
+        tr:nth-child(even) td {
+            background-color: var(--secondary-color);
+        }
+
+        .meta-info {
+            font-size: 0.8rem;
+            color: #7f8c8d;
+            text-align: center;
+            margin-top: 30px;
+            padding: 16px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .toc-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .toc-list li {
+            padding: 5px 0;
+            border-bottom: 1px solid #edf2f7;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Iso Yawi CTO Practice</h1>
+        <p>NICTA Operator Licensing Regulation 2010 Study Guide</p>
+    </header>
+
+    <div class="container">
+
+        <div class="card">
+            <h2>Arrangement of Sections</h2>
+            <ul class="toc-list">
+                <li><strong>PART I - PRELIMINARY</strong> (Section 1: Interpretation)</li>
+                <li><strong>PART II - OPERATOR LICENSING</strong> (Sections 2 - 5)</li>
+                <li><strong>PART III - TERMS & CONDITIONS</strong> (Sections 6 - 9)</li>
+                <li><strong>PART IV - INDIVIDUAL LICENCES</strong> (Sections 10 - 12)</li>
+                <li><strong>PART V - REGISTRATION UNDER CLASS LICENCES</strong> (Section 13)</li>
+                <li><strong>PART VI - OPERATOR LICENCE FEES</strong> (Sections 14 - 17)</li>
+                <li><strong>PART VII - NUMBERING FEES</strong> (Sections 18 - 20)</li>
+                <li><strong>PART VIII - GENERAL PROVISIONS</strong> (Sections 21 - 25)</li>
+                <li><strong>SCHEDULE 1</strong> - Licence Categories (Tables A, B, & C)</li>
+                <li><strong>SCHEDULE 2</strong> - Statutory Fee Structures</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>Part I. - Preliminary</h2>
+            <h3>1. Interpretation</h3>
+            <p>Deemed to have come into operation on 29 October 2010. Made under the National Information and Communications Technology Act, 2009[cite: 60].</p>
+            
+            <div class="definition-block">
+                <span class="term">"Act"</span> means the National Information and Communication Technology Act, 2009 and any regulations made under the Act[cite: 64];
+            </div>
+            <div class="definition-block">
+                <span class="term">"bandwidth service"</span> means a network service which enables the transmission of units of information over a link within a particular unit of time[cite: 67];
+            </div>
+            <div class="definition-block">
+                <span class="term">"broadcasting distribution service"</span> means a network service that distributes television or radio programmes to appropriate receiving equipment regardless of distribution means, excluding point-to-point data/text or on-demand dial-up[cite: 68, 69, 71];
+            </div>
+            <div class="definition-block">
+                <span class="term">"international gateway"</span> means any equipment, hardware or software, in a network which interfaces that network with an international network[cite: 79];
+            </div>
+            <div class="definition-block">
+                <span class="term">"international gateway services"</span> means a network service which provides interconnection between a domestic network and an international gateway[cite: 80];
+            </div>
+            <div class="definition-block">
+                <span class="term">"line link"</span> means a facility that enables communication between two distinct points on a network or networks, other than a radiocommunications link[cite: 87];
+            </div>
+            <div class="definition-block">
+                <span class="term">"PSTN"</span> means a public switched telephone network[cite: 93];
+            </div>
+            <div class="definition-block">
+                <span class="term">"radiocommunications link"</span> means a radiocommunications facility that enables communication between two distinct points on a network or networks[cite: 117];
+            </div>
+            <div class="definition-block">
+                <span class="term">"switching centre"</span> means a facility that terminates many circuits and which can interconnect or route traffic between and among circuits[cite: 123];
+            </div>
+            <div class="definition-block">
+                <span class="term">"switching service"</span> means a network service that terminates many circuits or routes traffic using frame relay, router internetworking, MPLS, IP switching, nodes, or points of presence[cite: 124, 125, 126, 127].
+            </div>
+        </div>
+
+        <div class="card private-section">
+            <div class="private-badge">Core CTO Practice Focus</div>
+            <h2>Private Use & Closed User Groups</h2>
+            
+            <h3>1. Statutory Framework</h3>
+            <p>Under Section 1 of the Regulations, specific definitions govern non-public infrastructure architectures:</p>
+            <ul>
+                <li><span class="term">"private use"</span> is strictly defined as the use of network services by a closed user group[cite: 91].</li>
+                <li><span class="term">"closed user group"</span> carries the structural meaning established under Section 2(2) of the core regulations[cite: 72].</li>
+            </ul>
+
+            <h3>2. NICTA Regulatory Authority</h3>
+            <p>According to Section 2(2), NICTA reserves the power to issue formal operational guidelines to clarify the technical and commercial meaning of a "closed user group"[cite: 141]. This directly determines whether an operator's internal infrastructure fits the criteria for a <strong>class network licence for private use</strong> rather than an individual licence[cite: 142].</p>
+
+            <h3>3. Infrastructure Categories (Schedule 1, Table A)</h3>
+            <p>Private deployments use distinct categories for licensing compliance[cite: 142]:</p>
+            <ul>
+                <li><strong>Private Exchange Nodes & Network Infrastructure:</strong> Facilities deployed exclusively for Private Use operate under a <strong>Class Licence</strong> regime with an indefinite duration (N/A expiry), contrasting with commercial carrier infrastructure which requires an Individual Licence valid for up to 15 years[cite: 142, 145].</li>
+                <li><strong>Private Network Services:</strong> Network management layers mapped onto a closed user group are categorized under Class Licensing[cite: 142, 145].</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>Part II & III. - Operator Licensing Standards</h2>
+            <h3>2. Licensing Requirements</h3>
+            <p>Schedule 1 mandates the necessary types, service durations, and rights allocations required to exercise facilities rights or supply ICT options within Papua New Guinea[cite: 133, 135, 138, 140].</p>
+
+            <h3>3. Network Licence Exemptions</h3>
+            <ol>
+                <li>NICTA may exempt a person from holding a network licence via a published declaration under Section 49(3) of the Act[cite: 148, 149].</li>
+                <li><strong>Condition Precedent:</strong> A fully licensed network operator must agree in writing to assume all statutory obligations under the Act for that exempted person[cite: 152, 155].</li>
+                <li>The agreement must bind the person to comply with the Act as if they were a full licensee[cite: 156, 157].</li>
+                <li>NICTA retains absolute discretion to impose conditions, vary terms, or suspend/revoke exemptions at any time[cite: 163, 166, 168, 170].</li>
+            </ol>
+
+            <h3>6. Standard Terms for Individual Licences</h3>
+            <p>Until full rules are codified under Section 55 of the Act, all individual licensees must maintain compliance with these operational standards[cite: 183, 184]:</p>
+            <ul>
+                <li>Promptly clear all applicable licence fees and levies[cite: 185].</li>
+                <li>Strictly maintain physical safety measures to safeguard life and property regarding electrical emissions and RF radiation hazards emanating from equipment installations[cite: 217].</li>
+                <li>Ensure charging and billing mechanisms are verifiable, accurate, and completely reliable in all material aspects[cite: 219, 221].</li>
+                <li>Notify NICTA within 14 days of any corporate restructuring, joint ventures, or changes in beneficial ownership/shareholding exceeding 10% in one year or 25% cumulatively[cite: 199, 203, 204, 206, 208].</li>
+                <li>Notify NICTA <em>prior</em> to share transfers or board composition updates changing hands by more than one quarter (25%)[cite: 210, 213, 215].</li>
+                <li>Indemnify NICTA against any third-party claims or proceedings resulting from licensee breaches[cite: 223].</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>Part IV & V. - Applications & Processing</h2>
+            <h3>10. Individual Licence Applications</h3>
+            <p>Applications must be supported by comprehensive technical, financial, and organizational documentation[cite: 264, 266]:</p>
+            <ul>
+                <li>Anticipated CapEx, OpEx, projected revenues, and financing plan sources[cite: 274].</li>
+                <li>Detailed technical design parameters, service roll-out schedules, geographic coverage maps, and target technology types[cite: 314, 315].</li>
+                <li>Operational safety parameters, including a verified <strong>Disaster Recovery Plan (DRP)</strong>[cite: 275, 276].</li>
+                <li>Corporate compliance data: Incorporation certificates, company constitutions, current extracts, and audited financial statements[cite: 279, 280, 281, 283, 285].</li>
+                <li>For foreign entities: Investment Promotion Authority (IPA) business certification[cite: 310].</li>
+                <li>Comprehensive CVs, verified police clearance checks, and valid passport/visa copies for all corporate directors and key shareholders[cite: 312].</li>
+            </ul>
+
+            <h3>11. Evaluation & Evaluation Timelines</h3>
+            <p>NICTA evaluates structural financial standing, technical expertise, corporate governance frameworks, business behavior history, spectrum availability, and prospective impacts on national security[cite: 334, 335, 336, 340, 342, 344, 346]. NICTA aims to process applications within a <strong>90-day window</strong> from receipt of all information[cite: 355, 356].</p>
+        </div>
+
+        <div class="card">
+            <h2>Part VI, VII & VIII. - Financials & Governance</h2>
+            <h3>14. Fee Defaulters & Late Penalty Interest</h3>
+            <p>Annual contributions are set by the Minister responsible for treasury matters to support NICTA's budget projections[cite: 14].</p>
+            <p><strong>Late Payment Penalties:</strong> Failure to pay fees or levies by the due date enables NICTA to impose additional late charges calculated daily at a rate of <strong>5 percentage points above the Kina Facility Rate per annum</strong>, and/or enforce immediate licence suspension[cite: 14].</p>
+
+            <h3>21. Interconnection Billing Data Provision</h3>
+            <p>Access providers are legally required, upon formal request by an access seeker, to deliver structured billing information including customer names, billing addresses, account details, called numbers, connection times, durations, and geographic origin/termination nodes[cite: 21]. This data must be supplied in an electronically or physically agreed format[cite: 21].</p>
+
+            <h3>22. Universal Access and Service Levy</h3>
+            <p>Pursuant to Section 107(2)(b) of the Act, NICTA caps the Universal Access and Service Levy at a maximum level <strong>not exceeding 2 percent of net revenues</strong>[cite: 22].</p>
+        </div>
+
+        <div class="card">
+            <h2>Schedule 1. - Licence Categories Matrix</h2>
+            
+            <h3>Table A: Network Licences [cite: 145]</h3>
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Facility / Network Service Scope</th>
+                            <th>Market Segment</th>
+                            <th>Duration</th>
+                            <th>Licence Type</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Earth stations, VSATs, Satellite control stations, Line links, Radiocommunications links, Switching centres, Towers, Masts, Ducts, Pits, Poles.</td>
+                            <td>International, National, Provincial, District</td>
+                            <td>Up to 15 years</td>
+                            <td><strong>Individual</strong></td>
+                        </tr>
+                        <tr style="background-color: #fffdf5;">
+                            <td><strong>Exchange nodes, Infrastructure for Closed User Groups</strong></td>
+                            <td><strong>Private Use</strong></td>
+                            <td><strong>N/A</strong></td>
+                            <td><strong>Class</strong></td>
+                        </tr>
+                        <tr>
+                            <td>Bandwidth, Public cellular mobile, Switching, International gateway, Facilities access, Broadcasting distribution, Space services.</td>
+                            <td>International, National, Provincial, District</td>
+                            <td>Up to 15 years</td>
+                            <td><strong>Individual</strong></td>
+                        </tr>
+                        <tr style="background-color: #fffdf5;">
+                            <td><strong>Private Network Services</strong></td>
+                            <td><strong>Private Use</strong></td>
+                            <td><strong>N/A</strong></td>
+                            <td><strong>Class</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3>Table B: Applications Licences [cite: 145]</h3>
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Applications Service Description</th>
+                            <th>Market Segment</th>
+                            <th>Duration</th>
+                            <th>Licence Type</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>International connectivity services</td>
+                            <td>International</td>
+                            <td>Up to 15 years</td>
+                            <td><strong>Individual</strong></td>
+                        </tr>
+                        <tr>
+                            <td>PSTN telephony, Public switched data, Public cellular services, Internet access, IP telephony, Directory services, Messaging services.</td>
+                            <td>National, Provincial, District</td>
+                            <td>Up to 15 years</td>
+                            <td><strong>Individual</strong></td>
+                        </tr>
+                        <tr>
+                            <td>Audiotext hosting, Public payphone services</td>
+                            <td>Community Service</td>
+                            <td>N/A</td>
+                            <td><strong>Class</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Schedule 2. - Prescribed Fee Schedule [cite: 146]</h2>
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Statutory Item Description</th>
+                            <th>Fee (PGK Kina)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Application fee (Commercial operations, other than not-for-profit)</td>
+                            <td><strong>K5,000</strong></td>
+                        </tr>
+                        <tr>
+                            <td>Application fee (Solely not-for-profit entities)</td>
+                            <td><strong>K500</strong></td>
+                        </tr>
+                        <tr>
+                            <td>Official application to vary conditions of an active individual licence</td>
+                            <td><strong>K500</strong></td>
+                        </tr>
+                        <tr>
+                            <td>Administrative change of particulars of an active licence</td>
+                            <td><strong>K200</strong></td>
+                        </tr>
+                        <tr>
+                            <td>Copies or direct extracts from the official public register</td>
+                            <td><strong>K2.50 per page</strong></td>
+                        </tr>
+                        <tr>
+                            <td>Certified replacement of a lost, defaced, or destroyed licence/permit</td>
+                            <td><strong>K25 per page</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="meta-info">
+            <p>Executed by the Head of State & Governor General on 29 October 2010[cite: 59, 146].</p>
+            <p>Iso Yawi CTO Practice Engineering Resource • End of Document</p>
+        </div>
+
+    </div>
+
+</body>
+</html>
